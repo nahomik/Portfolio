@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --card: #f8f9fa;
+  --card-foreground: #1a1a1a;
+  --border: #e5e7eb;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --gruvbox-red: #ef4444;
+  --gruvbox-green: #10b981;
+  --gruvbox-yellow: #f59e0b;
+  --gruvbox-blue: #3b82f6;
+  --gruvbox-purple: #a855f7;
+  --gruvbox-aqua: #14b8a6;
+  --gruvbox-orange: #f97316;
+  --gruvbox-gray: #9ca3af;
+}
+
+.dark {
+  --background: #1d2021;
+  --foreground: #ebdbb2;
+  --card: #282828;
+  --card-foreground: #ebdbb2;
+  --border: #3c3836;
+  --muted: #3c3836;
+  --muted-foreground: #a89984;
+  --gruvbox-red: #fb4934;
+  --gruvbox-green: #b8bb26;
+  --gruvbox-yellow: #fabd2f;
+  --gruvbox-blue: #83a598;
+  --gruvbox-purple: #d3869b;
+  --gruvbox-aqua: #8ec07c;
+  --gruvbox-orange: #fe8019;
+  --gruvbox-gray: #a89984;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: linear-gradient(135deg, 
+    #fff5e6 0%, 
+    #ffe8cc 15%, 
+    #fff0f3 30%, 
+    #f0f9ff 45%, 
+    #e8f5e9 60%, 
+    #fef3e2 75%, 
+    #fce4ec 90%, 
+    #f3e5f5 100%);
+  background-attachment: fixed;
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: var(--foreground);
+  font-family: 'Figtree', ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+.dark body {
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.08) 0%, transparent 60%),
+    linear-gradient(135deg, 
+      #0a0a0f 0%, 
+      #12121a 25%, 
+      #0f0f18 50%, 
+      #14141f 75%, 
+      #0a0a0f 100%);
+  background-attachment: fixed;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--background);
+  border-left: 2px solid var(--border);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--gruvbox-orange), var(--gruvbox-red));
+  border: 2px solid var(--background);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--gruvbox-red), var(--gruvbox-purple));
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(214, 93, 14, 0.7);
+  color: var(--background);
+}
+
+.dark ::selection {
+  background-color: rgba(131, 165, 152, 0.65);
+  color: var(--foreground);
+}
