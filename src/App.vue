@@ -281,7 +281,7 @@
           <div class="bg-card border-l-4 border-gruvbox-purple rounded-r-xl p-6 shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer">
             <div class="flex flex-wrap items-start justify-between mb-3">
               <div>
-                <h3 class="text-2xl font-bold text-foreground">Bachelor's Degree in Computer Science</h3>
+                <h3 class="text-2xl font-bold text-foreground">Bachelor's Degree</h3>
                 <p class="text-gruvbox-blue font-semibold">Wolkite University - School of Computer Science and Technology</p>
               </div>
               <span class="text-sm text-muted-foreground">2021 - 2024</span>
