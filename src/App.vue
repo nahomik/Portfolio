@@ -556,7 +556,7 @@ const projects = [
     image: '/images/art_store.png',
     gradient: 'from-gruvbox-red/20 via-gruvbox-orange/20 to-gruvbox-yellow/20',
     github: 'https://github.com/nahomik/Digital-art-store',
-    demo: 'https://artstore.netlify.app',
+    demo: 'https://thedigitalartstore.netlify.app',
     isPrivate: false
   },
   {
