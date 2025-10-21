@@ -218,11 +218,6 @@
                class="group bg-card border-2 border-border rounded-2xl overflow-hidden hover:border-gruvbox-orange hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02] cursor-pointer">
             <div class="h-48 overflow-hidden relative" :class="project.image ? '' : 'bg-gradient-to-br ' + project.gradient">
               <img v-if="project.image" :src="project.image" :alt="project.title" class="w-full h-full object-cover" />
-              <div class="absolute inset-0 bg-card/80 dark:bg-card/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <svg class="w-16 h-16 text-gruvbox-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </div>
             </div>
             
             <div class="p-6">
@@ -250,9 +245,6 @@
                 </a>
                 <a v-if="project.demo" :href="project.demo" target="_blank"
                    class="flex-1 text-center px-4 py-2 bg-gruvbox-blue/10 border border-gruvbox-blue/30 rounded-lg text-sm font-medium text-gruvbox-blue hover:bg-gruvbox-blue hover:text-background transition-all duration-300 flex items-center justify-center gap-2">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
                   Live Demo
                 </a>
                 <span v-else
