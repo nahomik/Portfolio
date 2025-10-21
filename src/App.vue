@@ -145,7 +145,8 @@
 
           <p class="text-lg leading-relaxed text-muted-foreground">
             I hold a Bachelor's in Computer Science from Wolkite University. When I'm not coding, I explore emerging 
-            technologies, contribute to open-source projects, and collaborate on innovative solutions that make a difference.
+            technologies, contribute to open-source projects, and collaborate on innovative solutions that make a difference. 
+            In my free time, I enjoy playing chess and watching football.
           </p>
         </div>
       </div>
@@ -176,14 +177,14 @@
           <div class="bg-card border-l-4 border-gruvbox-blue rounded-r-xl p-6 shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer">
             <div class="flex flex-wrap items-start justify-between mb-3">
               <div>
-                <h3 class="text-2xl font-bold text-foreground">DevSecOps (Freelance)</h3>
+                <h3 class="text-2xl font-bold text-foreground">Full Stack Developer (Freelance)</h3>
                 <p class="text-gruvbox-blue font-semibold">Self-employed</p>
               </div>
               <span class="text-sm text-muted-foreground">October 2022 - Present</span>
             </div>
             <p class="text-muted-foreground leading-relaxed">
-              Providing DevOps and security consulting services. Building automated deployment pipelines, 
-              implementing security best practices, and optimizing cloud infrastructure for various clients.
+              Developing full-stack web applications for various clients. Building responsive frontends with React and Vue.js, 
+              creating robust APIs with Node.js and Express, and implementing secure authentication and database solutions.
             </p>
           </div>
 
@@ -215,7 +216,8 @@
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           <div v-for="project in projects" :key="project.id" 
                class="group bg-card border-2 border-border rounded-2xl overflow-hidden hover:border-gruvbox-orange hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02] cursor-pointer">
-            <div class="h-48 bg-gradient-to-br overflow-hidden relative" :class="project.gradient">
+            <div class="h-48 overflow-hidden relative" :class="project.image ? '' : 'bg-gradient-to-br ' + project.gradient">
+              <img v-if="project.image" :src="project.image" :alt="project.title" class="w-full h-full object-cover" />
               <div class="absolute inset-0 bg-card/80 dark:bg-card/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <svg class="w-16 h-16 text-gruvbox-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -251,13 +253,15 @@
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
-                  Live
+                  Live Demo
                 </a>
-                <span v-else class="flex-1 text-center px-4 py-2 bg-muted/50 border border-border rounded-lg text-sm font-medium text-muted-foreground cursor-not-allowed flex items-center justify-center gap-2">
+                <span v-else
+                      class="flex-1 text-center px-4 py-2 bg-muted border border-border rounded-lg text-sm font-medium text-muted-foreground cursor-not-allowed flex items-center justify-center gap-2">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                   </svg>
-                  Private
+                  Coming Soon
                 </span>
               </div>
             </div>
@@ -324,12 +328,12 @@
             <h3 class="text-xl font-bold text-gruvbox-red">Frontend</h3>
           </div>
           <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">HTML5</span>
+            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">CSS3</span>
+            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">JavaScript ES6</span>
             <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">React.js</span>
-            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Next.js</span>
-            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Vue.js</span>
-            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">JavaScript</span>
-            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">TypeScript</span>
-            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Tailwind CSS</span>
+            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">jQuery</span>
+            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Bootstrap</span>
           </div>
         </div>
 
@@ -343,22 +347,23 @@
           </div>
           <div class="flex flex-wrap gap-3">
             <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Node.js</span>
-            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Express</span>
+            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Express.js</span>
+            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">EJS</span>
+            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">REST APIs</span>
             <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">PostgreSQL</span>
-            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">MySQL</span>
-            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">SQLite</span>
-            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Redis</span>
+            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">SQL</span>
+            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Authentication</span>
+            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Security</span>
           </div>
         </div>
 
-        <!-- DevOps & Tools -->
+        <!-- DevOps & Cloud -->
         <div class="mb-12">
           <div class="flex items-center gap-3 mb-6">
-            <svg class="w-5 h-5 text-gruvbox-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            <svg class="w-5 h-5 text-gruvbox-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
             </svg>
-            <h3 class="text-xl font-bold text-gruvbox-yellow">DevOps & Tools</h3>
+            <h3 class="text-xl font-bold text-gruvbox-blue">DevOps & Cloud</h3>
           </div>
           <div class="flex flex-wrap gap-3">
             <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Docker</span>
@@ -366,7 +371,27 @@
             <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">GitHub Actions</span>
             <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Terraform</span>
             <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Ansible</span>
-            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Git</span>
+            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Prometheus</span>
+            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Grafana</span>
+            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Jenkins</span>
+          </div>
+        </div>
+
+        <!-- Tools & Other -->
+        <div class="mb-12">
+          <div class="flex items-center gap-3 mb-6">
+            <svg class="w-5 h-5 text-gruvbox-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <h3 class="text-xl font-bold text-gruvbox-yellow">Tools & Other</h3>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Git & GitHub</span>
+            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Unix/Linux</span>
+            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">Web3 & DApps</span>
+            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">NFTs</span>
+            <span class="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-gruvbox-orange hover:text-gruvbox-orange transition-all duration-300 cursor-pointer">ICP Blockchain</span>
           </div>
         </div>
 
@@ -382,8 +407,12 @@
             I'm constantly expanding my skillset and staying up-to-date with the latest technologies. Currently exploring:
           </p>
           <div class="flex flex-wrap gap-3">
-            <span class="px-4 py-2 bg-gruvbox-purple/10 border border-gruvbox-purple/30 rounded-lg text-sm font-medium text-gruvbox-purple">Microservices</span>
-            <span class="px-4 py-2 bg-gruvbox-purple/10 border border-gruvbox-purple/30 rounded-lg text-sm font-medium text-gruvbox-purple">AWS</span>
+            <span class="px-4 py-2 bg-gruvbox-purple/10 border border-gruvbox-purple/30 rounded-lg text-sm font-medium text-gruvbox-purple">Next.js</span>
+            <span class="px-4 py-2 bg-gruvbox-purple/10 border border-gruvbox-purple/30 rounded-lg text-sm font-medium text-gruvbox-purple">TypeScript</span>
+            <span class="px-4 py-2 bg-gruvbox-purple/10 border border-gruvbox-purple/30 rounded-lg text-sm font-medium text-gruvbox-purple">Cloud Platforms</span>
+            <span class="px-4 py-2 bg-gruvbox-purple/10 border border-gruvbox-purple/30 rounded-lg text-sm font-medium text-gruvbox-purple">Web3 & DApps</span>
+            <span class="px-4 py-2 bg-gruvbox-purple/10 border border-gruvbox-purple/30 rounded-lg text-sm font-medium text-gruvbox-purple">NFTs</span>
+            <span class="px-4 py-2 bg-gruvbox-purple/10 border border-gruvbox-purple/30 rounded-lg text-sm font-medium text-gruvbox-purple">ICP Blockchain</span>
           </div>
         </div>
       </div>
@@ -446,10 +475,11 @@
 
         <!-- Action Buttons -->
         <div class="flex flex-wrap gap-4 mt-8">
-          <a href="mailto:nahomendalkachew2002@gmail.com" 
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nahomendalkachew2002@gmail.com" 
+             target="_blank"
              class="px-8 py-4 bg-gruvbox-orange text-background rounded-xl font-semibold hover:scale-105 hover:shadow-xl transition-all duration-300 flex items-center gap-2">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
             Get In Touch
           </a>
@@ -523,63 +553,61 @@ const projects = [
     title: 'Digital Art Store',
     description: 'E-commerce platform for digital art marketplace with seller management, payment processing, and branch operations. Features admin dashboard, artist profiles, and secure payment integration.',
     tech: ['React', 'Node.js', 'Express', 'MongoDB'],
+    image: '/images/art_store.png',
     gradient: 'from-gruvbox-red/20 via-gruvbox-orange/20 to-gruvbox-yellow/20',
     github: 'https://github.com/nahomik/Digital-art-store',
-    demo: null
+    demo: null,
+    isPrivate: true
   },
   {
     id: 2,
-    title: 'Specter-trace',
-    description: 'A frontend and integration testing framework built to validate core application flows in isolation. Features silent test execution, detailed inspection, and automated failure tracing.',
-    tech: ['Node.js', 'React', 'Jest', 'Playwright'],
-    gradient: 'from-gruvbox-orange/20 via-gruvbox-red/20 to-gruvbox-purple/20',
-    github: 'https://github.com/nahomik/specter-trace-',
-    demo: null
-  },
-  {
-    id: 3,
-    title: 'PipeOps',
-    description: 'A lightweight automation and CI/CD orchestration tool that manages build, test, and deployment pipelines across environments.',
-    tech: ['Node.js', 'Next.js', 'Docker'],
-    gradient: 'from-gruvbox-blue/20 via-gruvbox-aqua/20 to-gruvbox-green/20',
-    github: 'https://github.com/nahomik/PipeOps',
-    demo: null
-  },
-  {
-    id: 4,
-    title: 'Equipay',
-    description: 'A payment and invoicing web application designed for small teams to track payments, send receipts, and manage client transactions.',
-    tech: ['React', 'Node.js', 'PostgreSQL', 'Express'],
-    gradient: 'from-gruvbox-purple/20 via-gruvbox-blue/20 to-gruvbox-aqua/20',
-    github: 'https://github.com/nahomik/Equipay',
-    demo: null
-  },
-  {
-    id: 5,
-    title: 'MesenQo',
-    description: 'A digital archive of Ethiopian Orthodox hymns and chants from the Yaredic tradition, with content categorized by feast and fast days. Includes audio playback and calendar-based navigation.',
-    tech: ['Next.js', 'Node.js', 'PostgreSQL', 'Express'],
-    gradient: 'from-gruvbox-yellow/20 via-gruvbox-orange/20 to-gruvbox-red/20',
-    github: 'https://github.com/nahomik/MesenQo',
-    demo: null
-  },
-  {
-    id: 6,
     title: 'Ge-ezConnect',
     description: 'A comprehensive digital hub for the Ethiopian Orthodox Tewahedo Church, bringing together sermons, liturgies, and community events under one platform.',
     tech: ['Next.js', 'Node.js', 'PostgreSQL', 'Tailwind CSS'],
     gradient: 'from-gruvbox-aqua/20 via-gruvbox-blue/20 to-gruvbox-purple/20',
     github: 'https://github.com/nahomik/Ge-ezConnect',
-    demo: null
+    demo: null,
+    isPrivate: true
   },
   {
-    id: 7,
-    title: 'Barrage-zero',
-    description: 'Distributed load execution scripts for performance benchmarking under controlled chaos. Powered by modular test plans simulating concurrent stress points in application layers.',
-    tech: ['Node.js', 'K6', 'Docker'],
-    gradient: 'from-gruvbox-green/20 via-gruvbox-yellow/20 to-gruvbox-orange/20',
-    github: 'https://github.com/nahomik/Barrage-zero',
-    demo: null
+    id: 3,
+    title: 'MesenQo',
+    description: 'A collection of Ethiopian Orthodox Tewahedo Church hymns and chants from the ancient Yaredic tradition, sung in Ge\'ez and Amharic. Organized by the church calendar, it covers major feasts, fasts, and liturgical seasons.',
+    tech: ['Next.js', 'Node.js', 'PostgreSQL', 'Express'],
+    gradient: 'from-gruvbox-yellow/20 via-gruvbox-orange/20 to-gruvbox-red/20',
+    github: 'https://github.com/nahomik/MesenQo',
+    demo: null,
+    isPrivate: true
+  },
+  {
+    id: 4,
+    title: 'Specter-trace',
+    description: 'A testing framework designed to validate critical application flows and frontend behavior in isolation. It emphasizes silent execution, detailed inspection, and reliable failure signals.',
+    tech: ['Node.js', 'React', 'Jest', 'Playwright'],
+    gradient: 'from-gruvbox-orange/20 via-gruvbox-red/20 to-gruvbox-purple/20',
+    github: 'https://github.com/nahomik/specter-trace-',
+    demo: null,
+    isPrivate: true
+  },
+  {
+    id: 5,
+    title: 'StMarygrate (ፍልሰታ ለማርያም)',
+    description: 'A digital resource documenting the Assumption of the Virgin Mary. "ፍልሰት" refers to migration from one place to another, specifically commemorating St. Mary\'s journey from Gethsemane to Paradise and the resurrection of her body under the Tree of Life.',
+    tech: ['Next.js', 'Node.js', 'PostgreSQL', 'Tailwind CSS'],
+    gradient: 'from-gruvbox-blue/20 via-gruvbox-aqua/20 to-gruvbox-green/20',
+    github: 'https://github.com/nahomik/StMarygrate',
+    demo: null,
+    isPrivate: true
+  },
+  {
+    id: 6,
+    title: 'Equipay',
+    description: 'A payment and invoicing web application designed for small teams to track payments, send receipts, and manage client transactions.',
+    tech: ['React', 'Node.js', 'PostgreSQL', 'Express'],
+    gradient: 'from-gruvbox-purple/20 via-gruvbox-blue/20 to-gruvbox-aqua/20',
+    github: 'https://github.com/nahomik/Equipay',
+    demo: null,
+    isPrivate: true
   }
 ]
 
