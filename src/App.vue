@@ -144,7 +144,7 @@
           </p>
 
           <p class="text-lg leading-relaxed text-muted-foreground">
-            I hold a Bachelor's in Computer Science from Wolkite University. When I'm not coding, I explore emerging 
+            I hold a Bachelor's Degree from Wolkite University. When I'm not coding, I explore emerging 
             technologies, contribute to open-source projects, and collaborate on innovative solutions that make a difference. 
             In my free time, I enjoy playing chess and watching football.
           </p>
